@@ -1,32 +1,37 @@
 import unittest
-import c_science as exr
+import ejercicios as exc
 
 
-class testsExercises(unittest.TestCase):
+class testRecursion(unittest.TestCase):
 
-    def test_decimalToBinary_01(self):
-        received_value = exr.decimalToBinary(24)
-        expected_value = '1100'
+    def test_nFactorial_01(self):
+        received_value = exc.nFactorial(5)
+        expected_value = 120
         self.assertEqual(received_value, expected_value)
 
-    def test_decimalToBinary_02(self):
-        received_value = exr.decimalToBinary(7)
-        expected_value = '111'
+    def test_nFactorial_02(self):
+        received_value = exc.nFactorial(8)
+        expected_value = 40320
         self.assertEqual(received_value, expected_value)
 
-    def test_decimalToBinary_03(self):
-        received_value = exr.decimalToBinary(7)
-        expected_value = '111'
+    def test_nFactorial_03(self):
+        received_value = exc.nFactorial(3)
+        expected_value = 6
         self.assertEqual(received_value, expected_value)
 
-    def test_binaryToDecimal_01(self):
-        received_value = exr.binaryToDecimal('10101')
+    def test_nFibonacci_01(self):
+        received_value = exc.nFibonnacci(3)
+        expected_value = 2
+        self.assertEqual(received_value, expected_value)
+
+    def test_nFibonacci_02(self):
+        received_value = exc.nFibonnacci(6)
+        expected_value = 8
+        self.assertEqual(received_value, expected_value)
+
+    def test_nFibonacci_03(self):
+        received_value = exc.nFibonnacci(8)
         expected_value = 21
-        self.assertEqual(received_value, expected_value)
-
-    def test_binaryToDecimal_02(self):
-        received_value = exr.binaryToDecimal('11111')
-        expected_value = 31
         self.assertEqual(received_value, expected_value)
 
 
